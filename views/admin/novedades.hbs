@@ -1,0 +1,56 @@
+<h1 style="margin:110px"> Hola Proximamente Portafolio</h1>
+
+<div class="container" style="margin-top:100px;">
+    {{!-- fila 1 --}}
+    <div class="row">
+        <div class="col">
+            <p class="text-end">
+                <span>Hola {{persona}}!</span>
+                <a href="admin/login/logout" class="btn btn-danger">Cerrar sesión<i class="fas fa-sing-out-alt"></i></a>
+            </p>
+        </div>
+    </div>
+    {{!-- Fin fila 1 --}}
+    {{!--Fila 2--}}
+    <div class="row">
+        <div class="col-7" style="margint-top:-9px;">
+          <h2>Novedades</h2>
+        </div>
+        <div class="col-5 text-end">
+            <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fa-duotone fa-plus"></i></i>Nuevo</a>
+        </div>
+    </div>
+    {{!--Fin fila 2 --}}
+    {{!--Fila 3--}}
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col" class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each novedad}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{titulo}}</td>
+                        <td>{{{imagen}}}</td>
+                        <td class="text-end">
+                            <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i class="fas fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{!--Fin fila 3--}}
+    
+
+</div>
+{{!-- fin container --}}

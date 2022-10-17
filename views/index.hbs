@@ -1,0 +1,82 @@
+<!--Inicio Novedades-->
+<div class="row my-3">
+    <!--Inicio Noverdades-->
+    <div id="novedades" class="col-md-4 offset-md-2">
+        <h3 class="text-center">Novedades</h3>
+        <ul class="lista-novedades">
+        {{#each novedades}}
+            <li>
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Modal{{id}}"><img src="{{imagen}}" width="120">
+                    {{titulo}} </a>
+            </li>
+        {{/each}}
+        </ul>
+    </div>
+    <!-- Testimonios  -->
+    <div class="col-md-3 my-3">
+        <div class="rounded py-3 testimonios">
+            <h3 class="text-center"> Testimonios</h3>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonio">
+                            <h5>"Excelente desarrolladora!!</h5>
+                            <p>Joana Gimenez</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonio">
+                            <h5>"Excelente trabajo Realizado!!</h5>
+                            <p>Emiliano Sereno</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonio">
+                            <h5>"Excelente Sitio!!</h5>
+                            <p>Roco Rafael</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+        <!--Fin testimonio-->
+    </div>
+    <!--Fin novedades-->
+
+    <!-- Inicio Modal -->
+    {{#each novedades}}
+    <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modalExampleLabel">{{titulo}}</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{imagen}}">
+                    <p>{{descripcion}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    <!--Fin Novedades-->
