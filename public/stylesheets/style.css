@@ -1,0 +1,266 @@
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(172, 172, 177) rgb(65, 64, 63);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background:rgb(65, 64, 63);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(172, 172, 177);
+    border-radius: 20px;
+    border: 3px solid rgb(65, 64, 63);
+  }
+
+  
+body{
+    overflow-x:hidden;
+  }
+.navbar-brand{
+    border-radius:100%;
+    width: 80px;
+}
+        /* PORTADA */
+
+.hero{
+    padding:50px;
+    background: url(../images/portada1.png) no-repeat;
+    background-size:cover;
+    height: 0.5vh;
+    min-height: 600px;
+    color:rgb(255, 255, 255);
+}
+        /* FIN PORTADA  */
+
+h1, p{
+    font-weight: bold;
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: 2px;
+}
+h3{
+    
+    margin:10px 0;
+    font-family: 'Source Code Pro', monospace;
+    background-color: #aaa;
+}
+li, a{
+    color:black;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+li, a:hover{
+    cursor: pointer;
+    color:#9a9191;
+
+}
+#novedades{
+    border-radius: 3%;   
+}
+.nav-item{
+    letter-spacing: 2px;
+}
+
+
+.lista-novedades{
+   
+    padding: 0;
+    list-style: none;
+}
+.lista-novedades{
+    margin:10px 5px;
+}
+
+.lista-novedades{
+    line-height: 45px;
+    font-family: 'Source Code Pro', monospace;
+    text-decoration: none;
+    font-size:1.2rem;
+    transition: all .2s ease-in-out;
+    display: block;
+}
+
+
+            /*TESTIMONIO*/
+.testimonios{
+    background-color: rgb(213, 209, 209);
+    padding-bottom: 4rem !important;
+}
+.testimonio{
+    text-align: center;
+    padding: 50px 20px;
+}
+
+        /*Visitanos*/
+.mapa iframe{
+    width: 100%;
+    aspect-ratio: 1.2;
+}
+        /*Contacto*/
+.content{
+
+    max-width: 500px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    background-color: #5a4c4c;
+    text-transform: uppercase;
+}
+
+.contact-wrapper{
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255,.3 );
+}
+.contact-wrapper{
+    padding:1em;
+}
+
+.contact-form form{
+    margin:0;
+    padding: 1em;
+    
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea{
+    width: 100%;
+    padding: .7em;
+    border:none;
+    background: none;
+    outline: 0;
+    color:white;
+    border-bottom: 2px solid rgba(114, 107, 107, 0.976);
+    
+}
+.contact-form form button{
+    background: rgb(69, 67, 67);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.contact-form form button:hover,
+.contact-form form button:focus{
+    background: #7a7878;
+    color:#0b0b0b;
+    transition: background-color 1s ease;
+    outline: 0;
+    
+}
+#conocenos{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+    
+
+/* Portafolio */
+/* Portafolio */
+.portafolio{
+    width: 110%;
+    position: static;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    grid-gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #4e4b4b;
+    align-items: flex-start;
+    padding: 1.125em 3.156em;
+    min-height:45rem;
+    
+  }
+  
+  
+  .portafolio-box{
+    width: 110%;  
+    text-align: center;
+    justify-content: center;
+    background-color:#4e4b4b;
+    position: relative;
+    overflow: hidden;
+    min-height: 25px;
+    padding: 11px;
+    animation: zoomInUp;
+    animation-duration: 0.2s;
+    display: flex;
+    
+  }
+  .portafolio-item{
+    margin: 4.5625em 0 0 -10.4375em;
+    box-sizing: border-box;
+    width: 100%;  
+    margin-right: 20%; 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .portafolio-box-heading{
+    margin-bottom: 0.3125em;
+    justify-content: space-around;
+    left: 250%;
+    color: #8a8782;
+    overflow: auto;
+    padding: 0.625em;
+    display: flex;
+  }
+  .portafolio-box-img{
+    margin: 0;
+    padding: 0;
+    width: 12.5em;
+    height: 12.5em;
+    display: inline-block;
+    border-radius: 8px;
+  }
+  .portafolio-figure{
+    margin: 1.875em 9.8em 0 0;
+    position: relative;
+    display: inline-block;
+    animation: fedeInUp;
+    animation-delay: 5s;
+    animation-duration: 8s;
+    transition: all else 0.3s;
+  }
+  .portafolio_box-span{
+    color:#dfcccc;
+    display: block;
+    margin-left: 0.625em; 
+    padding-bottom: 1px;
+    justify-content: center;
+    font-size: xx-large;
+    
+    font-family: 'Source Code Pro', monospace;
+    text-decoration:underline;
+   
+  }
+  
+  
+  .portafolio-figure:hover{
+    transform:scale(1.2);
+  }
+  
+  
+  
+  .linea {
+    height: 1px;
+    max-width: 200px;
+    padding: 0;
+    margin: 5px auto 0 auto;
+  }
+  
+/*Footer*/
+footer{
+    background-color: #aaa;
+
+
+}
